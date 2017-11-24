@@ -15,7 +15,7 @@ We will be working with GitHub as the most standard for open source projects. If
 
 With a plus sign in the top right you can create a new repository that will hold your prject. It is recommended that you include a `README.md` file in your repository (like this one) that gives a description of your project.
 
-## Basic git commands: clone, pull, add, commit, push
+## Basic git commands
 
 When first creating a local copy of a git repository you can use the `git clone` command. The actual url will depend on your username and repository, but for this repository this command yould look like this:
 ```
@@ -38,11 +38,52 @@ You have at your disposal the following basic commands:
 
 So a typical workflow might look something like this:
 ```
+$ git status  # Make sure I have no local changes
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
 $ git pull  # Get new changes from remote server
 Already up to date.
 $ touch new_file.txt  # Create a new file
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
 
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
 
+    new_file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git add new_file.txt  # Add new file to staging
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    new file:   new_file.txt
+$ git commit -m "Create new file"  # Commit the changes
+[master 6b1ff71] Create new file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new_file.txt
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+$ git push  # Push the new file into the remote repository
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 315 bytes | 315.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:MKolman/SHD-git.git
+   817f344..6b1ff71  master -> master
+```
 
 ## Branches
 
