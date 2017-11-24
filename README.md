@@ -15,6 +15,8 @@ We will be working with GitHub as the most standard for open source projects. If
 
 With a plus sign in the top right you can create a new repository that will hold your prject. It is recommended that you include a `README.md` file in your repository (like this one) that gives a description of your project.
 
+You can write the `README` file using the [Markdown descriptive language](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+
 ## Basic git commands
 
 When first creating a local copy of a git repository you can use the `git clone` command. The actual url will depend on your username and repository, but for this repository this command yould look like this:
@@ -37,7 +39,7 @@ You have at your disposal the following basic commands:
 ![git basics](img/git-basic.png)
 
 So a typical workflow might look something like this:
-```
+```bash
 $ git status  # Make sure I have no local changes
 On branch master
 Your branch is up to date with 'origin/master'.
