@@ -38,15 +38,18 @@ You have at your disposal the following basic commands:
 
 ![git basics](img/git-basic.png)
 
-So a typical workflow might look something like this:
+### What a typical workflow might look like
 ```bash
 $ git status  # Make sure I have no local changes
 On branch master
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
+
 $ git pull  # Get new changes from remote server
 Already up to date.
+```
+```bash
 $ touch new_file.txt  # Create a new file
 $ git status
 On branch master
@@ -58,6 +61,8 @@ Untracked files:
     new_file.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
+```
+```bash
 $ git add new_file.txt  # Add new file to staging
 $ git status
 On branch master
@@ -67,6 +72,8 @@ Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
     new file:   new_file.txt
+```
+```bash
 $ git commit -m "Create new file"  # Commit the changes
 [master 6b1ff71] Create new file
  1 file changed, 0 insertions(+), 0 deletions(-)
@@ -77,6 +84,8 @@ Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
+```
+```bash
 $ git push  # Push the new file into the remote repository
 Counting objects: 3, done.
 Delta compression using up to 8 threads.
