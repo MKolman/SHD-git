@@ -15,4 +15,6 @@ With a plus sign in the top right you can create a new repository that will hold
 
 ## Basic git commands: clone, pull, add, commit, push
 
+![git basics](img/git-basic.png)
+
 ## Branches
