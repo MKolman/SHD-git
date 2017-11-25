@@ -136,16 +136,38 @@ git checkout <branch-name>
 Once you complete a feature or resolve a bug you might wish to port the changes
 back to the `master` branch.
 
-There are two ways of joining branches
- - `git merge <branch-name>` merges `<branch-name>` into the current branch and
-    creates a so-called merge commit where it commits the different changes from
-    both branches.
- - `git rebase <branch-name>` applies the changes from `<branch-name>` and then
-    re-applies the changes of the current branch on top.
+There are two ways of joining branches; merging branches and rebasing branches.
+
+#### Git merge
+
+`git merge <branch-name>` - merges `<branch-name>` into the current branch and
+creates a so-called merge commit where it commits the different changes from
+both branches.
 
 ![git merge](img/git-merge.png)
+
+#### Git rebase
+
+`git rebase <branch-name>` - applies the changes from `<branch-name>` and then
+re-applies the changes of the current branch on top.
+
 ![git rebase](img/git-rebase.png)
 
+### Typical workflow
+
+```bash
+$ git branch new-feature  # Create a new branch
+$ git checkout new-feature  # Move to the new brach
+$ echo "Adding a line to README" >> README.md  # Edit a file
+$ git add README.md  # Add a file to staging
+$ git commit -m "Update README"  # Commit the file
+$ git checkout master  # Move back to the master branch
+$ git pull  # Fetch the new changes on master
+$ git checkout new-feature  # Move back to the new branch
+$ git rebase master  # Join changes from master to the new branches
+$ git checkout master  # Move to the master branch
+$ git merge new-feature  # Merge the changes into the master branch
+```
 
 ## Jokes
 ![git fire](img/git-fire.png)
