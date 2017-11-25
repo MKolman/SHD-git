@@ -143,8 +143,8 @@ There are two ways of joining branches
  - `git rebase <branch-name>` applies the changes from `<branch-name>` and then
     re-applies the changes of the current branch on top.
 
-![git merge](img/git-merge.svn)
-![git rebase](img/git-rebase.svn)
+![git merge](img/git-merge.png)
+![git rebase](img/git-rebase.png)
 
 
 ## Jokes
