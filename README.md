@@ -11,8 +11,7 @@ by whomever you grant access. With the proper use of git all previous versions
 of your documents are saved and available.
 
 On Linux, chances are that git command line interface is already installed. On
-Windows and Mac computers I recommend you [download git tools](https://git-
-scm.com/downloads). You can open a bash terminal with right click in your
+Windows and Mac computers I recommend you [download git tools](https://git-scm.com/downloads). You can open a bash terminal with right click in your
 preffered folder and clicking `Git Bash Here`.
 
 ## Create a GitHub account and a repository
